@@ -1,0 +1,30 @@
+.stack-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('/assets/images/bg.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #logo-image {
+    height: 15%;
+    position: absolute;
+    top: 5%;
+    z-index:1;
+  }
+  
+  #desenho-image {
+    width: 190px;
+    height: 160px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    z-index: 2;
+  }
+  

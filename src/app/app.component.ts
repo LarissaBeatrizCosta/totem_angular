@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { ImageBackgroundComponent } from "./components/image-background/image-background.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [RouterOutlet, ImageBackgroundComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
