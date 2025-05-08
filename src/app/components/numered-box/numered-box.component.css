@@ -1,0 +1,16 @@
+.numered-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 58px;
+    height: 62px;
+    border-radius: 16px;
+    color: white;
+    border: none;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+#numered-box-selected{
+    border: 2px solid blue;
+}

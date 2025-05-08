@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { ImageBackgroundComponent } from "./components/image-background/image-background.component";
+import { IndexComponent } from "./views/index/index.component";
 
 @Component({
   selector: 'app-root',
@@ -10,5 +11,5 @@ import { ImageBackgroundComponent } from "./components/image-background/image-ba
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'aprendendo_angular';
+
 }

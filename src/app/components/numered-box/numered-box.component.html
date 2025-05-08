@@ -1,0 +1,9 @@
+<button
+  class="numered-box"
+  [id]="isSelected ? 'numered-box-selected' : null"
+  [ngClass]="{ 'numered-box-selected': isSelected }"
+  [ngStyle]="{ 'background-color': colorArray[number] }"
+  (click)="onClick()"
+>
+  {{ number }}
+</button>
