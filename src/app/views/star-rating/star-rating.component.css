@@ -1,0 +1,13 @@
+#star-rating{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+#star-rating-title{
+    font-size: 35px;
+    font-weight: bold;
+    padding-bottom: 25px;
+}

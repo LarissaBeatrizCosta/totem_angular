@@ -1,8 +1,9 @@
 <div id="numered-list">
-  <app-numered-box
-    *ngFor="let number of numbers"
-    [number]="number"
-    [isSelected]="ratingStore.recommendationRating() === number"
-    (clicked)="onClick(number)"
-  ></app-numered-box>
+  @for (number of numbers; track number) {
+    <app-numered-box
+      [number]="number"
+      [isSelected]="ratingStore.recommendationRating() === number"
+      (clicked)="onClick(number)"
+    ></app-numered-box>
+  }
 </div>

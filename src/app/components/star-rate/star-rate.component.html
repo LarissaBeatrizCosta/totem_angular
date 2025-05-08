@@ -1,0 +1,9 @@
+<div id="star-rate">
+  @for (star of stars; track star) {
+  <img
+    (click)="onClick(star)"
+    [src]="value >= star ? activeStar : inactiveStar"
+    id="star-image"
+  />
+  }
+</div>

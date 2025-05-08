@@ -1,6 +1,6 @@
 
-  <app-image-background>
-    <router-outlet>
-    </router-outlet>
-  </app-image-background>
+<app-image-background [showLogo]="showLogo">
+  <router-outlet (activate)='onChangeRoute($event)'>
+  </router-outlet>
+</app-image-background>
 

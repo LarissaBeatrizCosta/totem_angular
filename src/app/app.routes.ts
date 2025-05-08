@@ -1,13 +1,16 @@
 import { Routes } from '@angular/router';
-import { IndexComponent } from './views/index/index.component';
+import { IndexView } from './views/index/index.component';
+import { StarRatingView } from './views/star-rating/star-rating.component';
 
 export const routes: Routes = [
   {
     path: '',
-    component: IndexComponent,
+    component: IndexView,
+    data: { showLogo: true },
   },
   {
     path: 'home',
-    component: IndexComponent,
+    component: StarRatingView,
+    data: { showLogo: false },
   },
 ];

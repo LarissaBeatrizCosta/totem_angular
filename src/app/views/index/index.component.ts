@@ -9,6 +9,5 @@ import { ButtonSendComponent } from "../../components/button-send/button-send.co
   templateUrl: './index.component.html',
   styleUrl: './index.component.css'
 })
-export class IndexComponent {
-
+export class IndexView {
 }

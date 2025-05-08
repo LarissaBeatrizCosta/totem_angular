@@ -3,7 +3,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
 import { CommonModule } from '@angular/common';
-import { RatingStore } from '../../store/rating-store/rating-store.component';
+import { RatingStore } from '../../store/rating-store.component';
 import { Router } from '@angular/router';
 
 @Component({
