@@ -7,7 +7,7 @@ export const routes: Routes = [
     component: IndexComponent,
   },
   {
-    path: 'index-component',
+    path: 'home',
     component: IndexComponent,
   },
 ];
