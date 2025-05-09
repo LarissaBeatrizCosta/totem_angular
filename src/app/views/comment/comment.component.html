@@ -1,0 +1,17 @@
+<div id="comment">
+  <div id="comment-button-container">
+    <app-button-send text="Finalizar comentário"(clicked)="save()"  > </app-button-send>
+  </div>
+
+  <div id="comment-content">
+    <h1 id="comment-title">Deixe seu comentário</h1>
+
+    <div id="comment-box">
+      <textarea
+      (input)="setComment($any($event.target).value)"
+      id="comment-textarea"
+        placeholder="Digite aqui ..."
+      ></textarea>
+    </div>
+  </div>
+</div>

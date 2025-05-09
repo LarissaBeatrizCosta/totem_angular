@@ -14,6 +14,7 @@ import { CommonModule } from '@angular/common';
 export class ButtonSendComponent {
   @Input() text!: string;
   @Input() color: string = '#F89E1B';
+
   @Output() clicked = new EventEmitter<void>();
 
   onClick() {

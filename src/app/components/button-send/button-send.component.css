@@ -2,12 +2,13 @@
   padding-top: 5%;
   align-items: center;
   display: flex;
+  white-space: nowrap;
   justify-content: center;
 }
 
 .custom-button {
-  font-size: 40px; 
+  font-size: 30px; 
   padding: 15px 0px 15px 0px;
-  width: 150px;  
-  height: 90%;          
+  height: 90%;        
+  padding: 10px;  
 }

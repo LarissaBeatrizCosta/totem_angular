@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { CpfStore } from '../../store/cpf-store.component';
+import { CpfStore } from '../../store/cpf-store';
 import { CpfButtonInputComponent } from "../cpf-button-input/cpf-button-input.component";
 
 @Component({

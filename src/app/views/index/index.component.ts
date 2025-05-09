@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { NumeredListComponent } from '../../components/numered-list/numered-list.component';
 import { ButtonSendComponent } from '../../components/button-send/button-send.component';
 import { Router } from '@angular/router';
-import { RatingStore } from '../../store/rating-store.component';
+import { RatingStore } from '../../store/rating-store';
 
 @Component({
   selector: 'app-index',

@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { RatingStore } from '../../store/rating-store.component';
+import { RatingStore } from '../../store/rating-store';
 import { NumeredBoxComponent } from "../numered-box/numered-box.component";
 import { CommonModule } from '@angular/common';
 

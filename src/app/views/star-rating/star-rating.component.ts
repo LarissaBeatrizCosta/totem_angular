@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { StarRateComponent } from "../../components/star-rate/star-rate.component";
 import { ButtonSendComponent } from "../../components/button-send/button-send.component";
 import { Router } from '@angular/router';
-import { StarsStore } from '../../store/rating-stars.component';
+import { StarsStore } from '../../store/rating-stars-store';
 
 @Component({
   selector: 'app-star-rating',
