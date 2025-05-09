@@ -1,0 +1,15 @@
+<div id="user-cpf">
+  <h1>Gostaria de informar o seu CPF?</h1>
+  <div id="buttons-send">
+    <app-button-send
+      text="Sim"
+      color="#78C878"
+      (clicked)="navigateToRegisterCpf()"
+    ></app-button-send>
+    <app-button-send
+      text="Nao"
+      color="#E6B422"
+      (clicked)="navigateToThanks()"
+    ></app-button-send>
+  </div>
+</div>

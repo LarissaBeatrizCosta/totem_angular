@@ -36,7 +36,7 @@ export class StarRatingView {
     console.log(environment, collaborator, time);
 
     if (environment !== null && collaborator !== null && time !== null) {
-      this.router.navigate(['']);
+      this.router.navigate(['Cpf']);
     } else {
       console.log('Nota não selecionada');
     }

@@ -1,0 +1,13 @@
+#user-cpf {
+  align-items: center;
+}
+
+#buttons-send {
+  padding-top: 5%;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20%;
+}
+

@@ -4,3 +4,10 @@
   display: flex;
   justify-content: center;
 }
+
+.custom-button {
+  font-size: 40px; 
+  padding: 15px 0px 15px 0px;
+  width: 150px;  
+  height: 90%;          
+}
