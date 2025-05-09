@@ -1,0 +1,20 @@
+<div id="cpf-container">
+    <input
+      matInput
+      [readonly]="true"
+      [value]="cpfValue()"
+      id="cpf-input-field"
+    />
+
+  <div id="cpf-buttons-container">
+    @for (button of buttonsCpfInput; let i = $index; track button) {
+      @if (i === buttonsCpfInput.length - 2) {
+        <div style="visibility: hidden"></div>
+      }
+      <app-cpf-button-input
+        [text]="button"
+        (clicked)="onClick(button)"
+      ></app-cpf-button-input>
+    }
+  </div>
+</div>
