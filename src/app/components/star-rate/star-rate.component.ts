@@ -16,6 +16,7 @@ export class StarRateComponent {
   inactiveStar: string = 'assets/images/starlight.png';
   activeStar: string = 'assets/images/estrela_active.png';
   onClick(star: number) {
+    console.log(star);
     this.value = star;
     this.clicked.emit(star);
   }

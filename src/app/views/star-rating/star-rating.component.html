@@ -1,9 +1,12 @@
 <div id="star-rating">
-  <span id="star-rating-title"> Ambiente do Posto de Atendimento </span>
-  <app-star-rate></app-star-rate>
-  <span id="star-rating-title"> Atendimento dos colaboradores </span>
-  <app-star-rate></app-star-rate>
-  <span id="star-rating-title"> Tempo de Espera </span>
-  <app-star-rate  ></app-star-rate>
-  <app-button-send text="Enviar" color = "#0095FF" router="/Home" ></app-button-send>
+  <span id="star-rating-title">Ambiente do Posto de Atendimento</span>
+  <app-star-rate (clicked)="setEnvironment($event)"></app-star-rate>
+
+  <span id="star-rating-title">Atendimento dos colaboradores</span>
+  <app-star-rate (clicked)="setCollaborator($event)"></app-star-rate>
+
+  <span id="star-rating-title">Tempo de Espera</span>
+  <app-star-rate (clicked)="setTime($event)"></app-star-rate>
+
+  <app-button-send text="Enviar" color="#0095FF" (clicked)="navigate()"></app-button-send>
 </div>
