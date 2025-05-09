@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { ButtonSendComponent } from '../../components/button-send/button-send.component';
 import { Router } from '@angular/router';
+import { RateService } from '../../hooks/save-rate';
 
 @Component({
   selector: 'app-user-cpf',
@@ -11,12 +12,14 @@ import { Router } from '@angular/router';
 })
 export class UserCpfView {
   private router = inject(Router);
+  private saveRateService = inject(RateService);
 
   navigateToRegisterCpf() {
     this.router.navigate(['RegisterCpf']);
   }
 
   navigateToThanks() {
+    this.saveRateService.saveRate();
     this.router.navigate(['']);
   }
 }
