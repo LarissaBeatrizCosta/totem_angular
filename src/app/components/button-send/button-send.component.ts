@@ -1,9 +1,8 @@
-import { Component, inject, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
 import { CommonModule } from '@angular/common';
-import { RatingStore } from '../../store/rating-store.component';
 import { Router } from '@angular/router';
 
 @Component({
@@ -16,12 +15,11 @@ import { Router } from '@angular/router';
 export class ButtonSendComponent {
   constructor(private route: Router) {}
 
-  @Input() text!: String;
-  ratingStore = inject(RatingStore);
+  @Input() text!: string;
+  @Input() color: string = '#F89E1B';
+  @Output() clicked = new EventEmitter<void>();
 
   onClick() {
-    this.ratingStore !== null
-      ? this.route.navigate(['/home'])
-      : console.log('null');
+    this.clicked.emit();
   }
 }

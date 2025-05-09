@@ -9,7 +9,7 @@ export const routes: Routes = [
     data: { showLogo: true },
   },
   {
-    path: 'home',
+    path: 'Home',
     component: StarRatingView,
     data: { showLogo: false },
   },

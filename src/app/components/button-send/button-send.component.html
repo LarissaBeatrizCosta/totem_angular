@@ -1,8 +1,11 @@
 <div id="button-send">
   <button
     mat-flat-button
+    type="button"
     (click)="onClick()"
-    [ngStyle]="{ 'background-color':'#F89E1B'}"
+    [ngStyle]="{ 'background-color': color}"
+    [attr.aria-label]="text"
+
   >
     {{ text }}
   </button>

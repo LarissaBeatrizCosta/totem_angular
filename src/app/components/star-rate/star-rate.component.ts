@@ -9,6 +9,8 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class StarRateComponent {
   @Input() value: number = 0;
+  @Input() onAction: () => void = () => {};
+
   @Output() clicked = new EventEmitter<number>();
   stars = [1, 2, 3, 4, 5];
   inactiveStar: string = 'assets/images/starlight.png';
