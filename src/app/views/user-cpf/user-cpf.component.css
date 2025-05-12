@@ -1,5 +1,6 @@
 #user-cpf {
-  align-items: center;
+  text-align: center;
+  
 }
 
 #buttons-send {
@@ -11,3 +12,10 @@
   gap: 20%;
 }
 
+@media screen and (max-width: 850px) {
+  #user-cpf {
+    font-size: 30px;
+    
+  }
+  
+}

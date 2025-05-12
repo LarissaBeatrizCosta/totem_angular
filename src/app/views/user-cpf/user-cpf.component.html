@@ -1,18 +1,20 @@
-<div id="user-cpf">
-  <h1>Gostaria de informar o seu CPF?</h1>
+<div>
+  <h1 id="user-cpf">Gostaria de informar o seu CPF?</h1>
   <div id="buttons-send">
     <app-button-send
       text="Sim"
       color="#66bb6a"
-      height="60px"
-      fontSize="40px"
+      [width]="size ? '90px' : '80px'"
+      [height]="size ? '60px' : '50px'"
+      [fontSize]="size ? '40px' : '30px'"
       (clicked)="navigateToRegisterCpf()"
     ></app-button-send>
     <app-button-send
       text="Não"
       color="#f89e1b"
-      height="60px"
-      fontSize="40px"
+      [width]="size ? '90px' : '80px'"
+      [height]="size ? '60px' : '50px'"
+      [fontSize]="size ? '40px' : '30px'"
       (clicked)="navigateToThanks()"
     ></app-button-send>
   </div>

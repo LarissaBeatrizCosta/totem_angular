@@ -2,7 +2,7 @@
   <app-cpf-input></app-cpf-input>
   <app-button-send
     width="150px"
-    fontSize="30px"
+    [fontSize]="size ? '30px' : '20px'"
     height="90%"
     text="Enviar"
     (clicked)="navigate()"

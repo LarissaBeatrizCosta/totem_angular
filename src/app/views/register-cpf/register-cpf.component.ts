@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, HostListener, inject } from '@angular/core';
 import { CpfInputComponent } from '../../components/cpf-input/cpf-input.component';
 import { ButtonSendComponent } from '../../components/button-send/button-send.component';
 import { CpfStore } from '../../store/cpf-store';
@@ -18,7 +18,12 @@ export class RegisterCpfView {
   private store = inject(CpfStore);
   private router = inject(Router);
   showAlert = inject(AlertStore);
+  size = window.innerWidth > 850;
 
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    this.size = window.innerWidth > 850;
+  }
   navigate() {
     if (this.store.cpfUser() !== null && isValidCpf(this.store.cpfUser())) {
       this.router.navigate(['Comment']);

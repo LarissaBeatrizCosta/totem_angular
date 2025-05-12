@@ -1,17 +1,24 @@
-#cpf-button{
-    background-color: #1E6F9F;
-    font-size: 30px;
-    color: white;
-    width: 70%;
-    height: 65%;
-    margin: 5px;
-    padding: 8px;
-    border-radius: 8px;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    align-items: center;
-    display: flex;
-    justify-content: center;
+#cpf-button {
+  background-color: #1e6f9f;
+  font-size: 30px;
+  color: white;
+  width: 70%;
+  height: 65%;
+  margin: 5px;
+  padding: 8px;
+  border-radius: 8px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 850px) {
+  #cpf-button {
+    font-size: 20px;
+    width: 55%;
     
+  }
 }

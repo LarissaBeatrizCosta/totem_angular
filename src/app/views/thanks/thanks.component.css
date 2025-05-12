@@ -6,6 +6,7 @@
 }
 
 #thanks-title {
+  text-align: center;
   font-size: 150px;
   font-weight: bold;
   color: #808080;
@@ -13,6 +14,7 @@
 }
 
 #thanks-subtitle {
+  text-align: center;
   font-size: 45px;
   font-weight: bold;
   color: #808080;
@@ -22,4 +24,19 @@
   font-size: 45px;
   font-weight: medium;
   color: #f4d03f;
+}
+
+@media screen and (max-width: 850px) {
+  #thanks-title {
+    font-size: 50px;
+  }
+  
+  #thanks-span {
+    font-size: 20px;
+  }
+  
+  #thanks-subtitle {
+    font-size: 20px;
+  }
+  
 }

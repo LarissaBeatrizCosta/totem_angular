@@ -1,9 +1,10 @@
-<div id="button-send" >
+<div id="button-send">
   <button
     mat-flat-button
     class="custom-button"
     type="button"
     (click)="onClick()"
+    [ngClass]="{ 'no-margin': isCommentRoute() }"
     [ngStyle]="{
       'background-color': color,
       width: width,
