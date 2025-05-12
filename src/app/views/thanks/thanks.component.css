@@ -1,0 +1,25 @@
+#thanks-content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#thanks-title {
+  font-size: 150px;
+  font-weight: bold;
+  color: #808080;
+  margin: 0px;
+}
+
+#thanks-subtitle {
+  font-size: 45px;
+  font-weight: bold;
+  color: #808080;
+}
+
+#thanks-span {
+  font-size: 45px;
+  font-weight: medium;
+  color: #f4d03f;
+}

@@ -21,6 +21,6 @@ export class UserCpfView {
 
   navigateToThanks() {
     this.saveRateService.saveRate();
-    this.router.navigate(['']);
+    this.router.navigate(['Thanks']);
   }
 }

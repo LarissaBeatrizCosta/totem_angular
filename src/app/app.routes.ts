@@ -4,6 +4,7 @@ import { StarRatingView } from './views/star-rating/star-rating.component';
 import { UserCpfView } from './views/user-cpf/user-cpf.component';
 import { RegisterCpfView } from './views/register-cpf/register-cpf.component';
 import { CommentView } from './views/comment/comment.component';
+import { ThanksView } from './views/thanks/thanks.component';
 
 export const routes: Routes = [
   {
@@ -26,5 +27,9 @@ export const routes: Routes = [
   {
     path: 'Comment',
     component: CommentView,
+  },
+  {
+    path: 'Thanks',
+    component: ThanksView,
   }
 ];
