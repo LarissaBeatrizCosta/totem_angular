@@ -1,4 +1,4 @@
-#button-send{
+#button-send {
   padding-top: 5%;
   align-items: center;
   display: flex;
@@ -8,5 +8,10 @@
 
 .custom-button {
   padding: 15px 0px 15px 0px;
-  padding: 10px;  
+}
+
+@media screen and (max-width: 850px) {
+  .custom-button {
+    margin-bottom: 10vh;
+  }
 }

@@ -4,6 +4,7 @@ import { StarsStore } from '../store/rating-stars-store';
 import { CpfStore } from '../store/cpf-store';
 import { CommentStore } from '../store/comment-store';
 import { Router } from '@angular/router';
+
 @Injectable({ providedIn: 'root' })
 export class resetTimer {
   private recommendation = inject(RatingStore);

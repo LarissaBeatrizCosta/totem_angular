@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, HostListener, inject } from '@angular/core';
 import { NumeredListComponent } from '../../components/numered-list/numered-list.component';
 import { ButtonSendComponent } from '../../components/button-send/button-send.component';
 import { Router } from '@angular/router';
@@ -17,6 +17,15 @@ export class IndexView {
   private router = inject(Router);
   private ratingStore = inject(RatingStore);
   showAlert = inject(AlertStore);
+  size = window.innerWidth > 850 
+
+
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    this.size = window.innerWidth > 850 ;
+  }
+
+
 
   navigateToHome() {
     const rating = this.ratingStore.recommendationRating();

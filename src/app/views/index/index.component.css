@@ -1,3 +1,22 @@
 #index-title {
-  padding-bottom: 40px;
+  padding: 0px 10px 20px 10px;
+  text-align: center;
+}
+
+#index {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 850px) {
+  #index {
+    margin-top: 200px;
+  }
+
+  #index-title {
+    text-align: center;
+    font-size: 25px;
+  }
 }

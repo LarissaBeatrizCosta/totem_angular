@@ -1,15 +1,15 @@
-<div>
+<div id="index">
   <h1 id="index-title">
     Em uma escala de 0 a 10 o quanto você indicaria a experiência de hoje para
     amigos e familiares?
   </h1>
   <app-numered-list></app-numered-list>
-  <app-button-send
+  <app-button-send id="index-button-send"
     text="Enviar"
     width="150px"
     color="#007acc"
     height="90%"
-    fontSize="30px"
+    [fontSize]="size ? '30px' : '20px'"
     (clicked)="navigateToHome()"
   ></app-button-send>
   @if (showAlert.showAlert) {
