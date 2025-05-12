@@ -1,21 +1,25 @@
 import { Component, inject } from '@angular/core';
-import { StarRateComponent } from "../../components/star-rate/star-rate.component";
-import { ButtonSendComponent } from "../../components/button-send/button-send.component";
+import { StarRateComponent } from '../../components/star-rate/star-rate.component';
+import { ButtonSendComponent } from '../../components/button-send/button-send.component';
 import { Router } from '@angular/router';
 import { StarsStore } from '../../store/rating-stars-store';
+import { AlertStore } from '../../store/alert-store';
+import { AlertComponent } from "../../components/alert/alert.component";
 
 @Component({
   selector: 'app-star-rating',
-  imports: [StarRateComponent, ButtonSendComponent],
+  imports: [StarRateComponent, ButtonSendComponent, AlertComponent],
   templateUrl: './star-rating.component.html',
-  styleUrl: './star-rating.component.css'
+  styleUrl: './star-rating.component.css',
 })
 export class StarRatingView {
   private router = inject(Router);
   private starsStore = inject(StarsStore);
-   showLogo : boolean = false;
+  showAlert = inject(AlertStore);
 
-   setEnvironment(value: number) {
+  showLogo: boolean = false;
+
+  setEnvironment(value: number) {
     this.starsStore.setstarEnvironmentRating(value);
   }
 
@@ -27,8 +31,7 @@ export class StarRatingView {
     this.starsStore.setstarstarTimeRating(value);
   }
 
-
-   navigate() {
+  navigate() {
     const environment = this.starsStore.starEnvironmentRating();
     const collaborator = this.starsStore.starCollaboratorRating();
     const time = this.starsStore.starTimeRating();
@@ -38,7 +41,10 @@ export class StarRatingView {
     if (environment !== null && collaborator !== null && time !== null) {
       this.router.navigate(['Cpf']);
     } else {
-      console.log('Nota não selecionada');
+      this.showAlert.showAlert = true;
+      setTimeout(() => {
+        this.showAlert.showAlert = false;
+      }, 3000);
     }
   }
 }

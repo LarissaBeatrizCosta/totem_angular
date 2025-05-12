@@ -1,4 +1,7 @@
-<div id ="register-cpf">
-    <app-cpf-input></app-cpf-input>
-    <app-button-send text="Enviar" (clicked)="navigate()" ></app-button-send>
+<div id="register-cpf">
+  <app-cpf-input></app-cpf-input>
+  <app-button-send text="Enviar" (clicked)="navigate()"></app-button-send>
+  @if (showAlert.showAlert) {
+  <app-alert text="Por favor, digite um CPF válido"></app-alert>
+  }
 </div>

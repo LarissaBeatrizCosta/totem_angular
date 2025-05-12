@@ -13,8 +13,29 @@ import { StarRatingView } from './views/star-rating/star-rating.component';
 })
 export class AppComponent {
   showLogo: boolean = true;
+  private time: any;
 
   onChangeRoute(event: any) {
     this.showLogo = event.showLogo ?? true;
+  }
+
+  ngOnInit() {
+    this.resetTimer();
+    window.onload = this.resetTimer.bind(this);
+    document.onmousemove = this.resetTimer.bind(this);
+    document.onkeydown = this.resetTimer.bind(this);
+  }
+  resetTimer() {
+    if (this.time) {
+      clearTimeout(this.time);
+    }
+
+    this.time = setTimeout(() => {
+      this.doSomething();
+    }, 5000);
+  }
+
+  doSomething() {
+    console.log('Resetando avaliações...');
   }
 }

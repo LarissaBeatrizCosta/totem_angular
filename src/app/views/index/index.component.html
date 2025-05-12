@@ -5,4 +5,7 @@
   </h1>
   <app-numered-list></app-numered-list>
   <app-button-send text="Enviar" (clicked)="navigateToHome()"></app-button-send>
+  @if (showAlert.showAlert) {
+  <app-alert text="Por favor,registre sua avaliação"></app-alert>
+  }
 </div>

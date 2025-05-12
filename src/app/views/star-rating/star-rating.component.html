@@ -8,5 +8,12 @@
   <span id="star-rating-title">Tempo de Espera</span>
   <app-star-rate (clicked)="setTime($event)"></app-star-rate>
 
-  <app-button-send text="Enviar" color="#0095FF" (clicked)="navigate()"></app-button-send>
+  <app-button-send
+    text="Enviar"
+    color="#0095FF"
+    (clicked)="navigate()"
+  ></app-button-send>
+  @if (showAlert.showAlert) {
+  <app-alert text="Por favor, registre sua avaliação"></app-alert>
+  }
 </div>
