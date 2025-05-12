@@ -12,9 +12,11 @@ import { CommonModule } from '@angular/common';
   styleUrl: './button-send.component.css',
 })
 export class ButtonSendComponent {
-  @Input() text!: string;
+  @Input() text?: string;
   @Input() color: string = '#F89E1B';
-
+  @Input() width?: string;
+  @Input() height?: string;
+  @Input() fontSize?: string;
   @Output() clicked = new EventEmitter<void>();
 
   onClick() {

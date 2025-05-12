@@ -18,6 +18,6 @@ export class CpfInputComponent {
   }
 
   onClick(value: string) {
-    value === '⌫' ? this.cpfStore.deleteDigit() : this.cpfStore.setCpf(value);
+    value === '⌫' ? this.cpfStore.deleteDigit() : this.cpfStore.setCpfFormatted(value);
   }
 }

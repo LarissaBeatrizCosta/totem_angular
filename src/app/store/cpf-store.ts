@@ -10,7 +10,11 @@ export class CpfStore {
     return this.cpfUser();
   }
 
-  setCpf(digit: string) {
+  setCpf(digits: string) {
+    this.cpfUser.set(digits);
+  }
+
+  setCpfFormatted(digit: string) {
     const digitsOnly = this.cpfUser().replace(/\D/g, '') + digit;
     const formatted = this.cpfFormatPipe.transform(digitsOnly);
     this.cpfUser.set(formatted);

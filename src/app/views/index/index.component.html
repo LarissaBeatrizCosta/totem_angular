@@ -4,7 +4,14 @@
     amigos e familiares?
   </h1>
   <app-numered-list></app-numered-list>
-  <app-button-send text="Enviar" (clicked)="navigateToHome()"></app-button-send>
+  <app-button-send
+    text="Enviar"
+    width="150px"
+    color="#007acc"
+    height="90%"
+    fontSize="30px"
+    (clicked)="navigateToHome()"
+  ></app-button-send>
   @if (showAlert.showAlert) {
   <app-alert text="Por favor,registre sua avaliação"></app-alert>
   }

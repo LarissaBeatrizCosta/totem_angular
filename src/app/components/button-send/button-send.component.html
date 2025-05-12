@@ -4,9 +4,13 @@
     class="custom-button"
     type="button"
     (click)="onClick()"
-    [ngStyle]="{ 'background-color': color}"
+    [ngStyle]="{
+      'background-color': color,
+      width: width,
+      height: height,
+      fontSize: fontSize
+    }"
     [attr.aria-label]="text"
-
   >
     {{ text }}
   </button>
