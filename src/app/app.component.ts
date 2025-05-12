@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 import { ImageBackgroundComponent } from './components/image-background/image-background.component';
-import { IndexView } from './views/index/index.component';
-import { StarRatingView } from './views/star-rating/star-rating.component';
+
+import { resetTimer } from './hooks/reset-timer';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +14,7 @@ import { StarRatingView } from './views/star-rating/star-rating.component';
 export class AppComponent {
   showLogo: boolean = true;
   private time: any;
+  private reset = inject(resetTimer);
 
   onChangeRoute(event: any) {
     this.showLogo = event.showLogo ?? true;
@@ -36,6 +37,6 @@ export class AppComponent {
   }
 
   doSomething() {
-    console.log('Resetando avaliações...');
+    this.reset.reset();
   }
 }

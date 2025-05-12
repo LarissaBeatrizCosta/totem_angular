@@ -11,7 +11,7 @@ export const routes: Routes = [
     component: IndexView,
   },
   {
-    path: 'Home',
+    path: 'Stars',
     component: StarRatingView,
     data: { showLogo: false },
   },
