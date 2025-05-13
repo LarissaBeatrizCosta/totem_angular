@@ -1,11 +1,10 @@
 import { Component, HostListener, inject } from '@angular/core';
 import { CpfInputComponent } from '../../components/cpf-input/cpf-input.component';
 import { ButtonSendComponent } from '../../components/button-send/button-send.component';
-import { CpfStore } from '../../store/cpf-store';
 import { Router } from '@angular/router';
 import isValidCpf from '../../utils/valid-cpf';
-import { AlertStore } from '../../store/alert-store';
 import { AlertComponent } from "../../components/alert/alert.component";
+import { AppStore } from '../../store/app-store';
 
 @Component({
   selector: 'app-register-cpf',
@@ -15,9 +14,8 @@ import { AlertComponent } from "../../components/alert/alert.component";
   styleUrl: './register-cpf.component.css',
 })
 export class RegisterCpfView {
-  private store = inject(CpfStore);
+  private store = inject(AppStore);
   private router = inject(Router);
-  showAlert = inject(AlertStore);
   size = window.innerWidth > 850;
 
   @HostListener('window:resize', ['$event'])
@@ -28,9 +26,9 @@ export class RegisterCpfView {
     if (this.store.cpfUser() !== null && isValidCpf(this.store.cpfUser())) {
       this.router.navigate(['Comment']);
     } else {
-      this.showAlert.showAlert = true;
+      this.store.showAlert = true;
       setTimeout(() => {
-        this.showAlert.showAlert = false;
+        this.store.showAlert = false;
       }, 3000);
     }
   }

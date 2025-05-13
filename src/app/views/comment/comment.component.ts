@@ -1,8 +1,8 @@
 import { Component, inject } from '@angular/core';
 import { ButtonSendComponent } from '../../components/button-send/button-send.component';
-import { CommentStore } from '../../store/comment-store';
 import { RateService } from '../../hooks/save-rate';
 import { Router } from '@angular/router';
+import { AppStore } from '../../store/app-store';
 
 @Component({
   selector: 'app-comment',
@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
   styleUrl: './comment.component.css',
 })
 export class CommentView {
-  private store = inject(CommentStore);
+  private store = inject(AppStore);
   private saveRateService = inject(RateService);
   private router = inject(Router);
 

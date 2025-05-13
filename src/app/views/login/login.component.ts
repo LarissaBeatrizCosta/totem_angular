@@ -1,10 +1,10 @@
 import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { ButtonSendComponent } from '../../components/button-send/button-send.component';
-import { AlertStore } from '../../store/alert-store';
 import { FormsModule } from '@angular/forms';
 import validator from 'email-validator';
 import { AlertComponent } from '../../components/alert/alert.component';
+import { AppStore } from '../../store/app-store';
 
 @Component({
   selector: 'app-login',
@@ -15,7 +15,7 @@ import { AlertComponent } from '../../components/alert/alert.component';
 })
 export class LoginView {
   private router = inject(Router);
-  showAlert = inject(AlertStore);
+  store = inject(AppStore);
   showLogo: boolean = false;
   emailValue = '';
   password = '';
@@ -32,9 +32,9 @@ export class LoginView {
       console.log(this.password);
       console.log(this.emailValue);
 
-      this.showAlert.showAlert = true;
+      this.store.showAlert = true;
       setTimeout(() => {
-        this.showAlert.showAlert = false;
+        this.store.showAlert = false;
       }, 3000);
     }
   }

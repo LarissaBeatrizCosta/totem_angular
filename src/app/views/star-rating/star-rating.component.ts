@@ -2,9 +2,8 @@ import { Component, HostListener, inject } from '@angular/core';
 import { StarRateComponent } from '../../components/star-rate/star-rate.component';
 import { ButtonSendComponent } from '../../components/button-send/button-send.component';
 import { Router } from '@angular/router';
-import { StarsStore } from '../../store/rating-stars-store';
-import { AlertStore } from '../../store/alert-store';
 import { AlertComponent } from '../../components/alert/alert.component';
+import { AppStore } from '../../store/app-store';
 
 @Component({
   selector: 'app-star-rating',
@@ -14,8 +13,7 @@ import { AlertComponent } from '../../components/alert/alert.component';
 })
 export class StarRatingView {
   private router = inject(Router);
-  private starsStore = inject(StarsStore);
-  showAlert = inject(AlertStore);
+  private store = inject(AppStore);
   showLogo: boolean = false;
   size = window.innerWidth > 850;
 
@@ -25,30 +23,30 @@ export class StarRatingView {
   }
 
   setEnvironment(value: number) {
-    this.starsStore.setstarEnvironmentRating(value);
+    this.store.setstarEnvironmentRating(value);
   }
 
   setCollaborator(value: number) {
-    this.starsStore.setstarCollaboratorRating(value);
+    this.store.setstarCollaboratorRating(value);
   }
 
   setTime(value: number) {
-    this.starsStore.setstarstarTimeRating(value);
+    this.store.setstarstarTimeRating(value);
   }
 
   navigate() {
-    const environment = this.starsStore.starEnvironmentRating();
-    const collaborator = this.starsStore.starCollaboratorRating();
-    const time = this.starsStore.starTimeRating();
+    const environment = this.store.starEnvironmentRating();
+    const collaborator = this.store.starCollaboratorRating();
+    const time = this.store.starTimeRating();
 
     console.log(environment, collaborator, time);
 
     if (environment !== null && collaborator !== null && time !== null) {
       this.router.navigate(['Cpf']);
     } else {
-      this.showAlert.showAlert = true;
+      this.store.showAlert = true;
       setTimeout(() => {
-        this.showAlert.showAlert = false;
+        this.store.showAlert = false;
       }, 3000);
     }
   }
