@@ -15,9 +15,9 @@ export class resetTimer {
 
   reset() {
     this.recommendation.setRecommendationRating(null);
-    this.stars.setstarstarTimeRating(0);
-    this.stars.setstarCollaboratorRating(0);
-    this.stars.setstarEnvironmentRating(0);
+    this.stars.setstarstarTimeRating(null);
+    this.stars.setstarCollaboratorRating(null);
+    this.stars.setstarEnvironmentRating(null);
     this.cpf.setCpf('');
     this.comment.setComment('');
     this.router.navigate(['']);

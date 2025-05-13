@@ -7,13 +7,13 @@ export class StarsStore {
   starTimeRating = signal<number | null>(null);
 
 
-  setstarstarTimeRating(newRating: number) {
+  setstarstarTimeRating(newRating: number | null) {
     this.starTimeRating.set(newRating);
   }
-  setstarCollaboratorRating(newRating: number) {
+  setstarCollaboratorRating(newRating: number | null) {
     this.starCollaboratorRating.set(newRating);
   }
-  setstarEnvironmentRating(newRating: number) {
+  setstarEnvironmentRating(newRating: number | null) {
     this.starEnvironmentRating.set(newRating);
   }
 }
