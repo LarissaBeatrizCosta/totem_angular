@@ -4,17 +4,18 @@ import { ButtonSendComponent } from '../../components/button-send/button-send.co
 import { AlertStore } from '../../store/alert-store';
 import { FormsModule } from '@angular/forms';
 import validator from 'email-validator';
+import { AlertComponent } from '../../components/alert/alert.component';
 
 @Component({
   selector: 'app-login',
-  imports: [ButtonSendComponent, FormsModule],
+  imports: [ButtonSendComponent, FormsModule, AlertComponent],
   standalone: true,
   templateUrl: './login.component.html',
   styleUrl: './login.component.css',
 })
 export class LoginView {
   private router = inject(Router);
-  private showAlert = inject(AlertStore);
+  showAlert = inject(AlertStore);
   showLogo: boolean = false;
   emailValue = '';
   password = '';
