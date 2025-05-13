@@ -5,6 +5,7 @@ import { UserCpfView } from './views/user-cpf/user-cpf.component';
 import { RegisterCpfView } from './views/register-cpf/register-cpf.component';
 import { CommentView } from './views/comment/comment.component';
 import { ThanksView } from './views/thanks/thanks.component';
+import { LoginView } from './views/login/login.component';
 
 export const routes: Routes = [
   {
@@ -31,5 +32,13 @@ export const routes: Routes = [
   {
     path: 'Thanks',
     component: ThanksView,
-  }
+  },
+  {
+    path: 'Login',
+    component: LoginView,
+  },
+  {
+    path: '**',
+    redirectTo: ""
+  },
 ];

@@ -1,0 +1,23 @@
+<div id="login-container">
+  <img id="logo-image" src="assets/images/logo.png" />
+  <h1 id="login-title">Autenticação</h1>
+
+  <input
+    type="email"
+    placeholder="E-mail"
+    class="login-input"
+    [(ngModel)]="emailValue"
+  />
+  <input
+    type="password"
+    placeholder="Senha"
+    class="login-input"
+    [(ngModel)]="password"
+  />
+
+  <app-button-send
+    text="Entrar"
+    color="#007acc"
+    (clicked)="setLogin()"
+  ></app-button-send>
+</div>
