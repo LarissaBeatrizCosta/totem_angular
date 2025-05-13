@@ -14,7 +14,7 @@ import { AppStore } from '../../store/app-store';
 })
 export class IndexView {
   private router = inject(Router);
-  private store = inject(AppStore);
+  store = inject(AppStore);
   size = window.innerWidth > 850;
 
   @HostListener('window:resize', ['$event'])

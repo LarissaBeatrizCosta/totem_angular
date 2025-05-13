@@ -7,10 +7,18 @@
   padding-bottom: 30px;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 550px) {
   #numered-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+}
+
+@media screen and (min-width: 550px) and (max-width: 850px) {
+  #numered-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     gap: 10px;
   }
 }

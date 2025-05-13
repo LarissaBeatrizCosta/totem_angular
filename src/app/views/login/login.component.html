@@ -20,7 +20,7 @@
     color="#007acc"
     (clicked)="setLogin()"
   ></app-button-send>
-  @if (showAlert.showAlert) {
+  @if (store.showAlert) {
   <app-alert text="Email ou senha incorretos"></app-alert>
   }
 </div>

@@ -1,6 +1,5 @@
 import { Component, inject, Input } from '@angular/core';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import { AlertStore } from '../../store/alert-store';
 
 @Component({
   selector: 'app-alert',

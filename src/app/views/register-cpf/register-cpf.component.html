@@ -7,7 +7,7 @@
     text="Enviar"
     (clicked)="navigate()"
   ></app-button-send>
-  @if (showAlert.showAlert) {
+  @if (store.showAlert) {
   <app-alert text="Por favor, digite um CPF válido"></app-alert>
   }
 </div>

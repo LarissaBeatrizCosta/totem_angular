@@ -3,7 +3,7 @@ import { CpfInputComponent } from '../../components/cpf-input/cpf-input.componen
 import { ButtonSendComponent } from '../../components/button-send/button-send.component';
 import { Router } from '@angular/router';
 import isValidCpf from '../../utils/valid-cpf';
-import { AlertComponent } from "../../components/alert/alert.component";
+import { AlertComponent } from '../../components/alert/alert.component';
 import { AppStore } from '../../store/app-store';
 
 @Component({
@@ -14,7 +14,7 @@ import { AppStore } from '../../store/app-store';
   styleUrl: './register-cpf.component.css',
 })
 export class RegisterCpfView {
-  private store = inject(AppStore);
+  store = inject(AppStore);
   private router = inject(Router);
   size = window.innerWidth > 850;
 

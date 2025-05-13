@@ -13,7 +13,7 @@ import { AppStore } from '../../store/app-store';
 })
 export class StarRatingView {
   private router = inject(Router);
-  private store = inject(AppStore);
+  store = inject(AppStore);
   showLogo: boolean = false;
   size = window.innerWidth > 850;
 

@@ -2,7 +2,7 @@
   @for (number of numbers; track number) {
     <app-numered-box
       [number]="number"
-      [isSelected]="ratingStore.recommendationRating() === number"
+      [isSelected]="store.recommendationRating() === number"
       (clicked)="onClick(number)"
     ></app-numered-box>
   }
