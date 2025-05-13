@@ -18,7 +18,7 @@
 @media screen and (min-width: 550px) and (max-width: 850px) {
   #numered-list {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 10px;
   }
 }

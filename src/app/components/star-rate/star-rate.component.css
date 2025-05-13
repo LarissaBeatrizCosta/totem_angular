@@ -1,12 +1,11 @@
-#star-image{
-    padding: 5px 5px 35px 5px;
-    cursor: pointer;
-
+#star-image {
+  padding: 5px 5px 35px 5px;
+  cursor: pointer;
 }
 
-@media screen and (max-width: 850px) {
-    #star-image{
-        width: 50px;
-    }
-    
+@media screen and (max-width: 1550px) {
+  #star-image {
+    width: 50px;
+  }
 }
+
