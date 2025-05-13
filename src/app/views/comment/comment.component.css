@@ -40,7 +40,7 @@
   background: transparent;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 760px) {
   #comment-button-container {
     margin-top: 30vw;
   }
