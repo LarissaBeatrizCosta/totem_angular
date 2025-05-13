@@ -24,7 +24,7 @@ export class RegisterCpfView {
   }
   navigate() {
     if (this.store.cpfUser() !== null && isValidCpf(this.store.cpfUser())) {
-      this.router.navigate(['Comment']);
+      this.router.navigate(['comment']);
     } else {
       this.store.showAlert = true;
       setTimeout(() => {

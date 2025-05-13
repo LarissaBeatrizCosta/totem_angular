@@ -42,7 +42,7 @@
 
 @media screen and (max-width: 850px) {
   #comment-button-container {
-    margin-top: 80px;
+    margin-top: 30vw;
   }
 
   #comment-title {
@@ -53,5 +53,3 @@
     height: 55vh;
   }
 }
-
-

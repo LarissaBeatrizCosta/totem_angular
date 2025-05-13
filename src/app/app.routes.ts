@@ -13,28 +13,28 @@ export const routes: Routes = [
     component: IndexView,
   },
   {
-    path: 'Stars',
+    path: 'stars',
     component: StarRatingView,
     data: { showLogo: false },
   },
   {
-    path: 'Cpf',
+    path: 'cpf',
     component: UserCpfView,
   },
   {
-    path: 'RegisterCpf',
+    path: 'registerCpf',
     component: RegisterCpfView,
   },
   {
-    path: 'Comment',
+    path: 'comment',
     component: CommentView,
   },
   {
-    path: 'Thanks',
+    path: 'thanks',
     component: ThanksView,
   },
   {
-    path: 'Login',
+    path: 'login',
     component: LoginView,
   },
   {

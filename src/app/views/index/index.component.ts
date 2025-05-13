@@ -25,7 +25,7 @@ export class IndexView {
   navigateToHome() {
     const rating = this.store.recommendationRating();
     if (rating !== null) {
-      this.router.navigate(['Stars']);
+      this.router.navigate(['stars']);
     } else {
       this.store.showAlert = true;
       setTimeout(() => {

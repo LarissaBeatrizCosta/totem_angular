@@ -22,7 +22,7 @@ export class CommentView {
   }
 
   save() {
-    this.router.navigate(['Thanks']);
+    this.router.navigate(['thanks']);
     this.saveRateService.saveRate();
   }
 }

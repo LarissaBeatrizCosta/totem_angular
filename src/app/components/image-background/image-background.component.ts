@@ -15,6 +15,6 @@ export class ImageBackgroundComponent {
   
   navigate() {
     console.log('Redirecionando para login...');
-    this.router.navigate(['Login']);
+    this.router.navigate(['login']);
   }
 }

@@ -21,11 +21,11 @@ export class UserCpfView {
     this.size = window.innerWidth > 850;
   }
   navigateToRegisterCpf() {
-    this.router.navigate(['RegisterCpf']);
+    this.router.navigate(['registerCpf']);
   }
 
   navigateToThanks() {
     this.saveRateService.saveRate();
-    this.router.navigate(['Thanks']);
+    this.router.navigate(['thanks']);
   }
 }

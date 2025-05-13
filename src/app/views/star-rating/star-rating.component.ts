@@ -42,7 +42,7 @@ export class StarRatingView {
     console.log(environment, collaborator, time);
 
     if (environment !== null && collaborator !== null && time !== null) {
-      this.router.navigate(['Cpf']);
+      this.router.navigate(['cpf']);
     } else {
       this.store.showAlert = true;
       setTimeout(() => {
